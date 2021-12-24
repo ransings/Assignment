@@ -11,7 +11,7 @@ import java.sql.Connection;
 public class CrudOperations
 {
     private Connection con=JdbcConnection.getCon();
-    private Scanner sc;
+    private Scanner sc=new Scanner(System.in);
     
    
     public void insert() {
