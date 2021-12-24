@@ -1,6 +1,7 @@
 package com.sr.crud;
 
 import java.sql.ResultSet;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.PreparedStatement;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -42,6 +43,9 @@ public class CrudOperations
             else {
                 System.out.println("\nFailed to Insert.....");
             }
+        }
+        catch(SQLIntegrityConstraintViolationException e) {
+        	System.out.println("\nSTUDENT_NO must be unique...");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -123,6 +127,9 @@ public class CrudOperations
             else {
                 System.out.println("\nUpdated Successfully.....");
             }
+        }
+        catch(SQLIntegrityConstraintViolationException e){
+        	System.out.println("\nEntered STUDENT_NO is already taken please try with diffrent number...");
         }
         catch (Exception e) {
             System.out.println("\nFailed to update.....");
