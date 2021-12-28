@@ -16,31 +16,31 @@ public class MainClass
             switch (key) {
                 case 1: {
                     co.insert();
-                    continue;
+                    break;
                 }
                 case 2: {
                     co.update();
-                    continue;
+                    break;
                 }
                 case 3: {
                     co.delete();
-                    continue;
+                    break;
                 }
                 case 4: {
                     co.display();
-                    continue;
+                    break;
                 }
                 case 5: {
                     co.perticular();
-                    continue;
+                    break;
                 }
                 case 6: {
                     fl = false;
-                    continue;
+                    break;
                 }
                 default: {
                     System.out.println("Invalid Selection..");
-                    continue;
+                    break;
                 }
             }
         }
